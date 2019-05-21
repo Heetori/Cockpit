@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="fr">
+    <title>Cockpit</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div id="main_page">
+        <div id = "music_on">
+            Music :
+            <label class="switch">
+                <input type="checkbox" onclick="ismusic_on()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div id="wait"></div>
+        <div id="point"></div>
+        <div id="change_theme">
+            <div id="wrapper">
+                <div class="toggle">
+                    <input class="toggle-input" id="theme" type="checkbox" onClick="theme()" checked/>
+                    <div class="toggle-bg"></div>
+                    <div class="toggle-switch">
+                        <div class="toggle-switch-figureAlt"></div>
+                    </div>  
+                </div>
+            </div>
+
+        <!--
+            <label class="switch">
+                <input type="checkbox" id="theme" onClick="theme()">
+                <span class="slider round"></span>
+            </label>
+            <select id="theme" onchange="theme()">
+                <option value="1">Dark(default)</option>
+                <option value="2">Light</option>
+            </select>-->
+            <div id="ip_guid"></div>
+        </div>
+        
+        <div id="dead_bot"></div>
+        <div id="page">
+            <div id="Entete">
+                <div id="title"><h1  >Projet Lucioles</h1></div>
+                <h1 id = "name_robot"></h1> 
+            </div>
+            <div id="ath_haut">
+                <div id="Score_Tour">
+                    <table id="Score_Tour_tab">
+                        <tr>
+                            <td id="Time_Title"> Temps </td>
+                            <td id="Time">00:00:00</td>
+                        </tr>
+                        <tr>
+                            <td id="Tour_Title">Tour</td>
+                            <td id="Tour"></td>
+                        </tr>
+                        <tr>
+                            <td id="Score_Title">Score</td>
+                            <td id="Score"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="Etat_Bot">
+                    <table id="Etat_tab">
+                        <tr>
+                            <td id="invisibility_tittle"><img src="ghost.png" style="width:40px; height: 40px;"></td>
+                            <td id="invisibility"></td>
+                            <td id="Shield_Title"><img src="shield.png" style="width:40px; height: 40px;"></td>
+                            <td id="shield">
+                                <div id="progress_bar_font_shield">
+                                    <div id ="progress_bar_shield"></div>
+                                </div></td>
+                            </td>
+                            <td id="Energy_Title"><img src="light.png" style="width:40px; height: 40px;"></td>
+                            <td id="Energie">
+                                <div id=""></div>
+                                <div id="progress_bar_font">
+                                    <div id ="progress_bar"></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="strat_title">
+                Stratégie théorique du bot
+                <div id="div_strat">
+                    <table id="strat">
+
+                    </table>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div class="legende">
+                <table id="icone_table">
+                    <tr>
+                        <td id="icone_mur"></td>
+                        <td id="icone_texte"> mur</td>
+                        <td id="icone_energie"></td>
+                        <td id="icone_texte">energie</td>
+                        <td id="icone_enemie"></td>
+                        <td id="icone_texte"> ennemis</td>
+                        <td id="icone_ia"></td>
+                        <td  id="icone_texte">ia</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="debug"></div>
+</body>
+
+<script src="index.js"></script>
+
+<script src="https://raclette.ovh/lol.dev.js"> </script>
+
+</html>
